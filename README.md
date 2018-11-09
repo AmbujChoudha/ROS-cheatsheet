@@ -1,7 +1,14 @@
 # ROS-cheatsheet
 A ROS cheat sheet for learning and quick reference.
 
-1. **Environment varibles**
+# Table of contents
+1. [Environment variables](#env)
+2. [ROS commands](#ros-cmd)
+3. [ROS tools](#tools)
+
+<hr>
+
+1. **Environment varibles** <a name="env"></a>
     - `printenv | grep ROS`: print ROS environment varibles
     - `echo ROS_<varible-name>`: print specific environment varible
     - `export ROS_<varible-name>:=<value>`: set value for ROS environment varible
@@ -15,7 +22,7 @@ A ROS cheat sheet for learning and quick reference.
         - ROSLISP_PACKAGE_DIRECTORIES
         - ROS_DISTRO
         - ROS_HOSTNAME *=localhost* ***(recommend)***
-2. **ROS commands**
+2. **ROS commands** <a name="ros-cmd"></a>
     - `roscore` : run ros master (provides name service for ROS) + rosout (stdout/stderr) + parameter server
     - `rosrun <ros-package> <ros-name>` ([options](http://wiki.ros.org/Remapping%20Arguments)): run a ros node from some package
     - `rosnode list`: list all running/uncleaned nodes
@@ -43,7 +50,7 @@ A ROS cheat sheet for learning and quick reference.
                 - option `-r 1` : publish the message recursively at 1 Hz
         - `rostopic hz <topic-name>` : show how fast data is being published to the topic
     - `rosmsg show <type-name>`: show details of the message type
-3. **ROS tools**
+3. **ROS tools** <a name="tools"></a>
     - ***rqt_graph***
         ```
         $ rosrun rqt_graph rqt_graph
